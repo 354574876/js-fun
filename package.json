@@ -1,0 +1,28 @@
+{
+  "name": "demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "chalk": "^4.1.0",
+    "dipiper": "^1.0.13",
+    "lodash": "^4.17.15"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "@webeye/react-typescript": "^1.0.0",
+    "babel-loader": "^8.1.0",
+    "recast": "^0.19.1",
+    "source-map-loader": "^0.2.4",
+    "typescript": "^3.9.7",
+    "webpack": "^4.42.1",
+    "webpack-cli": "^3.3.11"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "author": "Wong",
+  "license": "ISC"
+}
