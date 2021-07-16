@@ -1,11 +1,11 @@
-function A () {
+function A() {
   this.name = 'a'
 }
 A.prototype.say = function () {
   console.log(this.name)
 }
 
-function B () {
+function B() {
   this.name = 'b'
   this.say = A.say.bind(this)
 }
@@ -14,15 +14,30 @@ const a = new A()
 const b = new B()
 b.say()
 
-const _bind = function() {
-  return function () {
-  
+const _bind = function () {
+  return function () {}
+}
+
+/**
+ * @param {ListNode} head
+ * @param {number} k
+ * @return {number}
+ */
+var kthToLast = function (head, k) {
+  let pre = null
+  let current = head
+  let count = 0
+  while (current) {
+    const next = current.next
+    current.next = pre
+    pre = current
+    current = next
+  }
+  while (pre) {
+    count++
+    if (count === k) {
+      return pre.val
+    }
+    pre = pre.next
   }
 }
-//
-// export default _bind
-// 我想说，时光兜兜转转，我感谢与你的这次遇见
-// 余生，请多赐教。
-// 好好生活慢慢爱你，不早不晚刚好是你。
-// 人生太长，我想挽着你的胳膊，陪你看夕阳。
-// 我只有两心愿 你在身边 在你身边
