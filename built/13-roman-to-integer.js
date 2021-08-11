@@ -16,15 +16,15 @@ var ROMAN_MAP;
 })(ROMAN_MAP || (ROMAN_MAP = {}));
 function romanToInt(s) {
     s = s
-        .replace(/IV/g, "a")
-        .replace(/IX/g, "b")
-        .replace(/XL/g, "c")
-        .replace(/XC/g, "d")
-        .replace(/CD/g, "e")
-        .replace(/CM/g, "f");
-    var str = s.split("");
-    var result = 0;
-    for (var i = 0; i < str.length; i++) {
+        .replace(/IV/g, 'a')
+        .replace(/IX/g, 'b')
+        .replace(/XL/g, 'c')
+        .replace(/XC/g, 'd')
+        .replace(/CD/g, 'e')
+        .replace(/CM/g, 'f');
+    const str = s.split('');
+    let result = 0;
+    for (let i = 0; i < str.length; i++) {
         result += ROMAN_MAP[str[i]];
     }
     return result;

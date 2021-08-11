@@ -16,3 +16,5 @@ function commonPrefix(pre, next) {
     }
     return index ? pre.substring(0, index) : "";
 }
+console.log(longestCommonPrefix(["flower", "flow", "flight"]));
+console.log(longestCommonPrefix(["dog", "racecar", "car"]));
