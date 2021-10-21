@@ -186,3 +186,15 @@ MyPromise
 // 		return p2
 // 	})
 // 	.then(res => console.log(res))
+
+
+
+new Promise((resolve, reject) => {
+	resolve()
+	// reject()
+}).then()
+
+
+Promise.resolve(() => {})
+Promise.reject(() => {})
+Promise.all([])

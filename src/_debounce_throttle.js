@@ -9,13 +9,12 @@
 const debounce = function (excute, delay) {
 	let timeout = null
 	return function () {
-		let context = this
 		let args = arguments
 		if (timeout) {
 			clearTimeout(timeout)
 		}
 		timeout = setTimeout(() => {
-			excute.apply(context, args)
+			excute.apply(this, args)
 		}, delay)
 	}
 }
@@ -23,14 +22,13 @@ const debounce = function (excute, delay) {
 
 const throttle = function (excute, delay) {
 	const startTime = new Date().getTime()
-	const timeout = null
+	let timeout = null
 	return function () {
-		let context = this
 		let args = arguments
 		if (!timeout) {
 			timeout = setTimeout(() => {
 				timeout = null
-				excute.applay(context, args)
+				excute.apply(this, args)
 			}, delay)
 		}
 	}

@@ -11,8 +11,11 @@
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
+    "@typescript-eslint/eslint-plugin": "^5.1.0",
+    "@typescript-eslint/parser": "^5.1.0",
     "@webeye/react-typescript": "^1.0.0",
     "babel-loader": "^8.1.0",
+    "eslint": "^8.0.1",
     "recast": "^0.19.1",
     "source-map-loader": "^0.2.4",
     "typescript": "^3.9.7",
