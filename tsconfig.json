@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "target": "ESNEXT",
+    "module": "system",
+    "noImplicitAny": true,
+    "removeComments": true,
+    "outDir": "./built"
+  },
+  "include": ["src/**/*.ts", "leetcode/**/*.ts"],
+  "exclude": ["node_modules", "**/*.spec.ts"]
+}
